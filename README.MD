@@ -1,11 +1,39 @@
-install requirements: 
-`pip install -r requirements.txt`
+## 1. Install a virtual environment
 
-run project:
-`python manage.py runserver`
+### Linux :
+```bash
+python3 -m venv venv
+```
+## 2. Activate venv
 
-run django-extensions console: 
-`python manage.py shell_plus --ipython`
+### Linux :
+```bash
+source venv/bin/activate
+```
+## 3. Installing dependencies
 
-python manage.py shell_plus --ipython
+### Linux :
+```bash
+pip3 install -r requirements.txt
+```
+## 4. Make db migrations 
+
+### Linux :
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+## 5. Run server
+
+### Linux :
+```bash
+python3 manage.py runserver
+```
+## 6. Run django-extensions console
+
+### Linux :
+```bash
+python3 manage.py shell_plus --ipython
+```
+
 

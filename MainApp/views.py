@@ -17,13 +17,14 @@ def add_snippet_page(request):
 
 # получение данных из бд
 def get_snippets(request):
+    # фильтруем базар по критерию
     snippets = Snippet.objects.filter(hide=False)
     for snippet in snippets:
         snippet.creation_date = snippet.creation_date.strftime("%Y-%m-%d %H:%M")
     context = {"snippets": snippets, "hide": False}
     return render(request, "pages/view_snippets.html", context)
 
-
+# выдаем все
 def get_snippets_hide(request):
     snippets = Snippet.objects.all()
     for snippet in snippets:
